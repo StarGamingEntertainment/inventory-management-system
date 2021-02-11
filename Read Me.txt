@@ -14,7 +14,24 @@ Open project folder and then open database folder where you will see inv_project
 Open your phpmyadmin create a database with name project_inv 
 select your database
 click on import file and then select inv_project.sql file then click on go
-Now you are ready to run index file
+
+Added Details By 'Ricky Downey' that you have to change, To Get Everything Working Correctly!!!!
+  1. Goto: inventory-management-system-master/database directory
+    1.1 Open the constants.php file and change the line below 1.2, to your url of your website, or look at example below for XAMPP 1.3
+    1.2 Change: define("DOMAIN","http://localhost/inv_project/public_html");
+    1.3 To XAMPP example: define("DOMAIN","http://localhost/inventory-management-system-master");
+        This means that the main inventory-management-system-master folder is in the htdocs folder, of the XAMPP Folder.
+  2. Goto: inventory-management-system-master/database directory again
+    2.1 uncomment these two lines (get rid of the forward slashes //)
+        $db = new Database();
+        $db->connect();
+  3. Goto: inventory-management-system-master/js directory
+    3.1 Open all 3 files, main.js, manage.js and order.js
+    3.2 Change this line at the top of each file: var DOMAIN = "http://localhost/inv_project/public_html";
+    3.3 to the same as what you put in deatils 1. above
+
+Now you are ready to run index file. in your browser url top bar type example: http://locahost/inventory-management-system-master
+that is it.
 Good luck
 
 
